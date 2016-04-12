@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                 break;
             case R.id.btn_show_modal_bottom_sheet:
+                ModalBottomSheetDialogFragment fragment = ModalBottomSheetDialogFragment.newInstance();
+                fragment.show(getSupportFragmentManager(), "");
                 break;
         }
     }
