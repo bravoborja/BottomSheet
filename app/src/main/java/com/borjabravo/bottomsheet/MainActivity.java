@@ -10,8 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
-        implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnHideBottomSheet, btnContractBottomSheet, btnExpandBottomSheet, btnShowModelBottomSheet;
     BottomSheetBehavior bottomSheetBehavior;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Bottom Sheet");
+        getSupportActionBar().setTitle(getString(R.string.app_name));
         LinearLayout bottomSheet = (LinearLayout) findViewById(R.id.bottomSheet);
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
         btnHideBottomSheet = (Button) findViewById(R.id.btn_hide_bottom_sheet);
@@ -36,27 +35,26 @@ public class MainActivity extends AppCompatActivity
         btnContractBottomSheet.setOnClickListener(this);
         btnExpandBottomSheet.setOnClickListener(this);
         btnShowModelBottomSheet.setOnClickListener(this);
-
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
                 switch (newState) {
-                            case BottomSheetBehavior.STATE_COLLAPSED:
-                                bottomSheetState.setText("STATE_COLLAPSED");
-                                break;
-                            case BottomSheetBehavior.STATE_EXPANDED:
-                                bottomSheetState.setText("STATE_EXPANDED");
-                                break;
-                            case BottomSheetBehavior.STATE_HIDDEN:
-                                bottomSheetState.setText("STATE_HIDDEN");
-                                break;
-                            case BottomSheetBehavior.STATE_DRAGGING:
-                                bottomSheetState.setText("STATE_DRAGGING");
-                                break;
-                            case BottomSheetBehavior.STATE_SETTLING:
-                                bottomSheetState.setText("STATE_SETTLING");
-                                break;
-                        }
+                    case BottomSheetBehavior.STATE_COLLAPSED:
+                        bottomSheetState.setText(getString(R.string.bottom_sheet_state_collapsed));
+                        break;
+                    case BottomSheetBehavior.STATE_EXPANDED:
+                        bottomSheetState.setText(getString(R.string.bottom_sheet_state_expanded));
+                        break;
+                    case BottomSheetBehavior.STATE_HIDDEN:
+                        bottomSheetState.setText(getString(R.string.bottom_sheet_state_hidden));
+                        break;
+                    case BottomSheetBehavior.STATE_DRAGGING:
+                        bottomSheetState.setText(getString(R.string.bottom_sheet_state_dragging));
+                        break;
+                    case BottomSheetBehavior.STATE_SETTLING:
+                        bottomSheetState.setText(getString(R.string.bottom_sheet_state_settling));
+                        break;
+                }
             }
 
             @Override
@@ -64,14 +62,6 @@ public class MainActivity extends AppCompatActivity
                 bottomSheetOffset.setText(String.valueOf(slideOffset));
             }
         });
-        //bottomSheetBehavior.setBottomSheetCallback(this);
-        //btnModalBottomSheet = (Button)findViewById(R.id.btnModalBottomSheet);
-        //btnModalBottomSheet.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View v) {
-        //
-        //    }
-        //});
     }
 
     @Override
@@ -87,11 +77,6 @@ public class MainActivity extends AppCompatActivity
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                 break;
             case R.id.btn_show_modal_bottom_sheet:
-                //BottomSheetDialogFragment bsdFragment =
-                //                MiBottomSheetDialogFragment.newInstance();
-                //
-                //        bsdFragment.show(
-                //                MainActivity.this.getSupportFragmentManager(), "BSDialog");
                 break;
         }
     }

@@ -34,7 +34,6 @@
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:background="@color/colorPrimary"
         android:padding="@dimen/activity_horizontal_margin"
-
         android:text="@string/expand_bottom_sheet"
         android:textColor="@android:color/white"/>
 
@@ -45,7 +44,6 @@
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:background="@color/colorPrimary"
         android:padding="@dimen/activity_horizontal_margin"
-
         android:text="@string/show_modal_bottom_sheet"
         android:textColor="@android:color/white"/>
 
@@ -53,17 +51,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin">
+
         <TextView
             android:id="@+id/bottom_sheet_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="true"
             android:textColor="@color/colorPrimaryDark"/>
+
         <TextView
             android:id="@+id/bottom_sheet_offset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimaryDark"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"/>
     </RelativeLayout>
 </LinearLayout>
