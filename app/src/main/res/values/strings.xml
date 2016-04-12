@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BottomSheet</string>
+    <string name="hide_bottom_sheet">Hide Bottom Sheet</string>
+    <string name="contract_bottom_sheet">Contract Bottom Sheet</string>
+    <string name="expand_bottom_sheet">Expand Bottom Sheet</string>
+    <string name="show_modal_bottom_sheet">Show modal Bottom Sheet</string>
+    <string name="persistent_bottom_sheet">Persistent Bottom Sheet</string>
+    <string name="modal_bottom_sheet">Modal Bottom Sheet</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id lacus elit. In et sapien nibh. Sed vitae porttitor leo. Suspendisse sagittis tempor mi pellentesque scelerisque. Donec a erat ac turpis dapibus pellentesque. Curabitur vitae lorem eget dui viverra porta ut sit amet nunc. Integer rutrum, urna eu malesuada semper, ex felis bibendum urna, at luctus mi tellus ac magna. Mauris sodales augue finibus elit ultricies ullamcorper. Donec tempor semper fringilla. In pellentesque sagittis elit non fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce suscipit justo eget augue consequat varius. Quisque augue neque, volutpat vulputate mauris ac, tempor placerat felis.</string>
+</resources>
